@@ -5,18 +5,19 @@ const path = require("path")
 const app = express()
 const port = process.env.PORT
 
-
+// error handling
 process.on('uncaughtException', function (err) {
   console.error(err);
   console.log("Node NOT Exiting...");
 });
 
-
+// setting the view engine and static files directory
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 
-// body-parser 
+
+// body-parser middleware
 app.use(bodyparser.urlencoded({extended:false}))
 app.use(bodyparser.json())
 

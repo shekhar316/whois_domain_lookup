@@ -2,7 +2,7 @@ const Domain = require("../models/domain")
 const tldjs = require('tldjs');
 const whois = require('whois')
 const XRegExp = require("xregexp");
-const { DATE } = require("sequelize");
+// const { DATE } = require("sequelize");
 
 
 exports.fetchWhoIsInfo = async (req, res) => {
